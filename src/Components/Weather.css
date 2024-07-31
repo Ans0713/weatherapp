@@ -6,6 +6,8 @@
   padding: 20px;
   color: #fff;
   font-family: Arial, sans-serif;
+  position: relative; 
+  padding-right: 280px; 
 }
 
 .search-bar {
@@ -31,7 +33,6 @@
   height: 30px;
   border-radius: 50%;
   cursor: pointer;
-  
 }
 
 .error {
@@ -82,4 +83,72 @@
 .col span {
   font-size: 0.8rem;
   color: #ddd;
+}
+
+.forecast {
+  margin-top: 40px;
+  width: calc(100% - 280px); 
+  max-width: 1000px; 
+  margin: 0 auto; 
+}
+
+.forecast h2 {
+  font-size: 2rem; 
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); 
+  text-align: center;
+}
+
+.forecast-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); 
+  gap: 15px; 
+  justify-content: center;
+  padding: 0 15px; 
+}
+
+.forecast-card {
+  background-color: rgba(255, 255, 255, 0.2); 
+  border: 2px solid rgba(200, 200, 200, 0.8); 
+  border-radius: 15px;
+  padding: 20px; 
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.forecast-card:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); 
+}
+
+.forecast-date {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.forecast-temperature {
+  font-size: 1.6rem;
+  margin-bottom: 5px;
+}
+
+.forecast-description {
+  font-size: 1.2rem;
+  color: #444; 
+}
+
+.map-container {
+  position: absolute; 
+  top: 20px;
+  right: 20px;
+  width: 250px; 
+  height: 250px; 
+  border-radius: 50%; 
+  overflow: hidden; 
+  border: 3px solid rgba(255, 255, 255, 0.7); 
+  background-color: rgba(255, 255, 255, 0.3); 
+}
+
+.map-container .leaflet-container {
+  border-radius: 50%;
 }
